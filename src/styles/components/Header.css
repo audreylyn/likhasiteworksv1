@@ -1,0 +1,201 @@
+/* Header.css */
+.header-banner {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-color: rgb(237, 87, 36);
+  color: white;
+  padding: 0 1.5rem;
+  z-index: 200;
+}
+
+.header-banner-content {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1140px;
+}
+
+.header-banner-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  line-height: 19.6px;
+  padding: 10px 0 0.75rem 0;
+}
+
+.header-banner-link {
+  text-align: center;
+  border-bottom: 0.8px dashed rgb(255, 219, 190);
+  color: rgb(255, 219, 190);
+  line-height: 18.2px;
+  text-decoration: none;
+}
+
+.header-banner-corner {
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.header-banner-corner-left {
+  left: 0;
+}
+
+.header-banner-corner-right {
+  right: 0;
+}
+
+.header-banner-corner-shape {
+  position: absolute;
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
+}
+
+.header-banner-corner-shape-left {
+  left: 0;
+  top: 0;
+  box-shadow: rgb(237, 87, 36) 1px 1px 3px 3000px;
+}
+
+.header-banner-corner-shape-right {
+  top: 0;
+  right: 0;
+  box-shadow: rgb(237, 87, 36) 1px 1px 3px 3000px;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background-color: rgb(255, 253, 235);
+  padding: 0 1rem;
+  z-index: 180;
+}
+
+@media (min-width: 768px) {
+  .main-navigation {
+    padding: 0 2.5rem;
+  }
+}
+
+.main-navigation-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  max-width: 1360px;
+  padding: 1.25rem 0;
+  border-radius: 1rem;
+}
+
+.main-navigation-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  z-index: 3;
+}
+
+.main-navigation-logo-link {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  text-align: left;
+  color: rgb(108, 99, 84);
+}
+
+.main-navigation-logo-image {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-align: left;
+  vertical-align: middle;
+  width: 168px;
+}
+
+.main-navigation-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  float: right;
+  justify-content: space-between;
+  position: relative;
+  margin-left: 24px;
+  flex-basis: 0%;
+}
+
+.main-navigation-menu {
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 6px;
+  flex-basis: 0%;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-navigation-menu {
+    display: block;
+  }
+}
+
+.main-navigation-link {
+  display: inline-block;
+  font-weight: 500;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+  margin-left: 4px;
+  margin-right: 8px;
+  color: rgb(108, 99, 84);
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 1360px;
+  padding: 6px 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-navigation-link:hover {
+  color: rgb(237, 87, 36);
+}
+
+.main-navigation-cta {
+  display: inline-block;
+  align-items: center;
+  background-color: rgb(237, 87, 36);
+  border-radius: 100px;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main-navigation-cta:hover {
+  background-color: rgb(220, 70, 20);
+  transform: translateY(-2px);
+}
