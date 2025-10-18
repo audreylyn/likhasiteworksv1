@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/components/Header.css';
+import AnimatedLogo from './AnimatedLogo';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       {/* Top Banner */}
@@ -11,7 +22,7 @@ const Header = () => {
             <div className="text-center">
               For marketing help, click here -&nbsp;
               <a
-                href="https://www.ohhmyads.com/"
+                href="#"
                 className="header-banner-link"
               >
                 coming soon...
@@ -32,56 +43,51 @@ const Header = () => {
         <div className="main-navigation-content">
           <div className="main-navigation-logo">
             <a
-              href="https://www.ohhmyads.com/"
+              href="#"
               className="main-navigation-logo-link"
             >
-              <img
-                src="https://storage.googleapis.com/download/storage/v1/b/prd-shared-services.firebasestorage.app/o/h2m-assets%2F52bba0fa61098a078d43b8fc284625c270ee2b3b.svg?generation=1760727381529893&alt=media"
-                className="main-navigation-logo-image"
-                alt="Ohhmyads Logo"
-              />
+              <AnimatedLogo />
             </a>
           </div>
 
-          <nav role="navigation" className="main-navigation-nav">
+          {/* Desktop Navigation */}
+          <nav role="navigation" className="main-navigation-nav desktop-nav">
             <div className="main-navigation-menu">
-              <a
-                href="https://ohhmyads.webflow.io/#About"
-                className="main-navigation-link"
-              >
-                About
-              </a>
-              <a
-                href="https://www.ohhmyads.com/our-work"
-                className="main-navigation-link"
-              >
-                Work
-              </a>
-              <a
-                href="https://ohhmyads.webflow.io/#Plans"
-                className="main-navigation-link"
-              >
-                Pricing
-              </a>
-              <a
-                href="https://www.ohhmyads.com/our-work"
-                className="main-navigation-link"
-              >
-                Showreel
-              </a>
-            </div>
-
-            <div>
-              <a
-                href="https://cal.com/ohhmyads/30min"
-                className="main-navigation-cta"
-              >
-                Contact Us
-              </a>
+              <a href="#" className="main-navigation-link">About</a>
+              <a href="#" className="main-navigation-link">Work</a>
+              <a href="#" className="main-navigation-link">Pricing</a>
+              <a href="#" className="main-navigation-link">Showreel</a>
             </div>
           </nav>
+
+          {/* Hamburger Button */}
+          <button 
+            className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+        <div className="mobile-menu-content">
+          <a href="#" className="mobile-menu-link" onClick={closeMenu}>About</a>
+          <a href="#" className="mobile-menu-link" onClick={closeMenu}>Work</a>
+          <a href="#" className="mobile-menu-link" onClick={closeMenu}>Pricing</a>
+          <a href="#" className="mobile-menu-link" onClick={closeMenu}>Showreel</a>
+          <a href="#" className="mobile-menu-cta" onClick={closeMenu}>Contact Us</a>
+        </div>
+      </div>
+
+      {/* Backdrop */}
+      {isMenuOpen && (
+        <div className="mobile-menu-backdrop" onClick={closeMenu}></div>
+      )}
     </>
   );
 };
