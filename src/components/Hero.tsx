@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/components/Hero.css';
 import StackIcon from 'tech-stack-icons';
 
@@ -27,9 +28,11 @@ const Hero = () => {
               <span className="hero-title-underline">& Coding Services</span>
             </h1>
             
-            <button className="hero-cta">
-              GET A QUOTE
-            </button>
+            <Link to="/quote">
+              <button className="hero-cta">
+                GET A QUOTE
+              </button>
+            </Link>
             
             <ul className="hero-features">
               <li>100% Risk-Free</li>

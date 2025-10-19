@@ -104,7 +104,7 @@ const Header = () => {
   return (
     <>
       {/* Top Banner */}
-      <div className="header-banner">
+      <div className={`header-banner ${isMenuOpen ? 'header-banner--hidden' : ''}`}>
         <div className="header-banner-content">
           <div className="header-banner-text">
             <div className="text-center">
@@ -191,6 +191,14 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+        <button 
+          className="mobile-menu-close"
+          onClick={closeMenu}
+          aria-label="Close menu"
+        >
+          <span></span>
+          <span></span>
+        </button>
         <div className="mobile-menu-content">
           <Link to="/about" className="mobile-menu-link" onClick={closeMenu}>About</Link>
           <Link to="/work" className="mobile-menu-link" onClick={closeMenu}>Work</Link>
