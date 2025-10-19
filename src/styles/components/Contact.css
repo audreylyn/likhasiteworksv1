@@ -327,9 +327,9 @@
   flex-shrink: 0;
 }
 
-.contact-method:hover .contact-method__icon {
-  background: rgb(31, 31, 31);
-  color: #FFD028;
+.contact-method:hover .contact-method__icon.instagram-icon {
+  background: #8f5db7;
+  color: white;
 }
 
 .contact-method__info {

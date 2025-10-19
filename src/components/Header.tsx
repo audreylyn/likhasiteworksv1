@@ -108,12 +108,12 @@ const Header = () => {
         <div className="header-banner-content">
           <div className="header-banner-text">
             <div className="text-center">
-              For marketing help, click here -&nbsp;
+              Unlock powerful marketing solutions -&nbsp;
               <a
-                href="#"
+                href="about#Contact"
                 className="header-banner-link"
               >
-                coming soon...
+                Submit an inquiry
               </a>
             </div>
           </div>

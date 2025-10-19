@@ -205,15 +205,15 @@
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: #E6B800;
-  color: white;
+  background: #e6b800;
+  color: rgb(31, 31, 31);
   padding: 10px 24px; /* Increased padding */
   border-radius: 20px;
   font-size: 0.875rem; /* Increased from 13px */
   font-weight: 800; /* Increased from 700 */
   letter-spacing: 0.5px;
   z-index: 10;
-  box-shadow: 0 4px 12px rgba(230, 184, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 208, 40, 0.4);
 }
 
 .pricing-action:hover,

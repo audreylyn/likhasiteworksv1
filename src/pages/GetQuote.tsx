@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import BottomNavigation from '../components/BottomNavigation';
 import '../styles/pages/GetQuote.css';
 
 const GetQuote = () => {

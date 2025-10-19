@@ -3,7 +3,7 @@ import '../styles/components/FAQs.css';
 import { ChevronDown } from 'lucide-react';
 
 const FAQs = () => {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(0);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);

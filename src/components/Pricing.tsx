@@ -110,8 +110,8 @@ const Pricing = () => {
                 {plan.originalPrice && (
                   <div className="pricing-original">was ₱{plan.originalPrice}</div>
                 )}
-                <h3 className="pricing-plan-title">{plan.name}</h3>
               </div>
+              <h3 className="pricing-plan-title">{plan.name}</h3>
               <ul className="pricing-feature-list">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="pricing-feature">{feature}</li>

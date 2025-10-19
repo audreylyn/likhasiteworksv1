@@ -92,7 +92,7 @@ const Hero = () => {
         {/* Tech Stack Section */}
         <div className="hero-trusted">
           <p className="hero-trusted-text">
-            Trusted by 5,000+ businesses and creative agencies worldwide from all shapes and sizes.
+            Trusted by 5,000+ businesses and creative agencies worldwide, leveraging cutting-edge tech stacks like React, TypeScript, Tailwind CSS, and more.
           </p>
           
           <div className="hero-tech-stack">

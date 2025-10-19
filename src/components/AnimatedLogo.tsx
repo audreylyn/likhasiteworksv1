@@ -1,3 +1,13 @@
+// GSAP Type Declarations
+declare global {
+  interface Window {
+    TweenLite: any;
+    Power1: any;
+    Power3: any;
+    Back: any;
+  }
+}
+
 import React, { useEffect, useRef, useState } from 'react';
 import '../styles/components/AnimatedLogo.css';
 
@@ -25,13 +35,13 @@ const AnimatedLogo = () => {
 
   useEffect(() => {
     const colors = [
-      { main: '#FBDB4A', shades: ['#FAE073', '#FCE790', '#FADD65', '#E4C650'] },
-      { main: '#F3934A', shades: ['#F7B989', '#F9CDAA', '#DD8644', '#F39C59'] },
-      { main: '#EB547D', shades: ['#EE7293', '#F191AB', '#D64D72', '#C04567'] },
-      { main: '#9F6AA7', shades: ['#B084B6', '#C19FC7', '#916198', '#82588A'] },
-      { main: '#5476B3', shades: ['#6382B9', '#829BC7', '#4D6CA3', '#3E5782'] },
-      { main: '#2BB19B', shades: ['#4DBFAD', '#73CDBF', '#27A18D', '#1F8171'] },
-      { main: '#70B984', shades: ['#7FBE90', '#98CBA6', '#68A87A', '#5E976E'] }
+      { main: '#B8860B', shades: ['#CD853F', '#DEB887', '#F4A460', '#DAA520'] }, // Darker gold/amber
+      { main: '#CD853F', shades: ['#DEB887', '#F4A460', '#DAA520', '#B8860B'] }, // Darker orange
+      { main: '#8B2635', shades: ['#A0522D', '#CD5C5C', '#DC143C', '#B22222'] }, // Darker red/rose
+      { main: '#4B0082', shades: ['#6A5ACD', '#8A2BE2', '#9370DB', '#663399'] }, // Darker purple
+      { main: '#191970', shades: ['#4169E1', '#1E90FF', '#000080', '#4682B4'] }, // Darker navy blue
+      { main: '#006400', shades: ['#228B22', '#32CD32', '#008000', '#2E8B57'] }, // Darker forest green
+      { main: '#013220', shades: ['#006400', '#228B22', '#32CD32', '#2E8B57'] }  // Darker emerald
     ];
 
     const createSVG = (type: string) => {
@@ -155,7 +165,7 @@ const AnimatedLogo = () => {
       const y2 = y0 + r2 * Math.sin(2 * Math.PI * a);
       const circSize = textSize * 0.05 * Math.random();
       circ.set('r', circSize);
-      circ.style('fill', '#eee');
+      circ.style('fill', '#333');
       svgRef.current?.appendChild(circ.element);
       if (window.TweenLite) {
         window.TweenLite.fromTo(

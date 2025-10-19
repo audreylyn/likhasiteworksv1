@@ -24,7 +24,7 @@
 }
 
 .process-subtitle-small {
-  color: #F9A825;
+  color: rgb(51, 51, 51);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -96,22 +96,22 @@
 
 /* Ensure path is visible */
 #svgC path {
-  stroke: rgba(249, 168, 37, 0.8) !important;
+  stroke: rgba(51, 51, 51, 0.8) !important;
   stroke-width: 3px !important;
   fill: none !important;
 }
 
 /* Ensure airplane is visible */
 #svgC #plane {
-  fill: rgba(249, 168, 37, 0.8) !important;
+  fill: rgba(51, 51, 51, 0.8) !important;
   opacity: 1 !important;
 }
 
 /* Step Number Badge */
 .step-num {
-  background: #F9A825;
+  background: rgb(51, 51, 51);
   border-radius: 50%;
-  box-shadow: 0 12px 20px 0 rgba(249, 168, 37, 0.4);
+  box-shadow: 0 12px 20px 0 rgba(51, 51, 51, 0.4);
   color: #ffffff;
   display: inline-block;
   font-size: 1.125rem;
@@ -131,7 +131,7 @@
   width: 140px;
   height: 140px;
   position: relative;
-  border: 3px solid #F9A825;
+  border: 3px solid rgb(51, 51, 51);
   border-radius: 50%;
   line-height: 140px;
   font-size: 40px;
@@ -210,7 +210,7 @@
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background: #F9A825;
+  background: rgb(51, 51, 51);
   margin: 0 5px;
   opacity: 0;
 }

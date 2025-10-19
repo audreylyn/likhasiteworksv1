@@ -4,7 +4,7 @@ import '../styles/components/RainbowText.css';
 import { Target, Zap, Briefcase, DollarSign, Shield, User, Gift, ChevronDown } from 'lucide-react';
 
 const About = () => {
-  const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+  const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
     setOpenAccordion(openAccordion === index ? null : index);
@@ -80,7 +80,7 @@ const About = () => {
             {/* Stats Illustration */}
             <div className="about-stats-illustration">
               <svg className="animation animating animated" width="577" height="334" viewBox="0 0 577 334" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_2024_25853)" stroke-dasharray="1000 1000" stroke-dashoffset="-340" style={{opacity: 1, strokeDashoffset: '0px'}}>
+                <g clip-path="url(#clip0_2024_25853)">
                   <path d="M74.5 229.89L84.77 263.98C85.76 267.26 89.03 269.29 92.41 268.72C95.79 268.15 98.22 265.14 98.07 261.72L96.5 226.55L74.5 229.88V229.89Z" fill="#E3736C"></path>
                   <path d="M52.1719 109.89L58.5019 140.22L62.0019 139.05C62.0019 139.05 62.0019 126.38 69.6719 124.88C77.3419 123.38 88.1719 127.55 88.1719 127.55L87.3419 104.38L52.1719 109.88V109.89Z" fill="#E3736C"></path>
                   <path d="M55.92 -1H39.25V15.67H55.92V-1Z" fill="black"></path>
@@ -144,7 +144,7 @@ const About = () => {
                   <path d="M568.328 48.56V71.22" stroke="black" stroke-width="3" stroke-miterlimit="10"></path>
                   <path d="M60.5625 261C66.3425 281.44 77.8925 288.11 88.1225 288.11" stroke="black" stroke-width="3" stroke-miterlimit="10"></path>
                 </g>
-                <defs stroke-dasharray="1000 1000" stroke-dashoffset="-340" style={{opacity: 1, strokeDashoffset: '0px'}}>
+                <defs>
                   <clipPath id="clip0_2024_25853">
                     <rect width="577" height="335.91" fill="white" transform="translate(0 -1)"></rect>
                   </clipPath>

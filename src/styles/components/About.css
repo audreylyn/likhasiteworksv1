@@ -108,10 +108,40 @@
   margin: 40px 0 30px;
 }
 
-.about-stats-img {
+.about-stats-illustration svg {
   width: 100%;
   max-width: 500px;
   height: auto;
+}
+
+/* SVG Animation Classes */
+.about-stats-illustration .animation {
+  stroke-dasharray: 1000 1000;
+  stroke-dashoffset: -340;
+  animation: drawIn 3s ease-in-out forwards;
+}
+
+.about-stats-illustration .animating {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.about-stats-illustration .animated {
+  stroke-dashoffset: 0;
+}
+
+@keyframes drawIn {
+  0% {
+    stroke-dashoffset: -340;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
 }
 
 /* Stats Numbers */

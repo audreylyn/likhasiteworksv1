@@ -53,7 +53,7 @@ const Process = () => {
           id: "squiggle",
           fill: "none",
           strokeWidth: "2",
-          stroke: "rgba(249, 168, 37, 0.5)",
+          stroke: "rgba(51, 51, 51, 0.5)",
           strokeMiterlimit: "10",
           strokeDasharray: "5 10",
           strokeDashoffset: "180"
@@ -62,14 +62,14 @@ const Process = () => {
         const Triangle = snapC.polyline("0, 30, 15, 0, 30, 30");
         Triangle.attr({
           id: "plane",
-          fill: "rgba(249, 168, 37, 0.8)"
+          fill: "rgba(51, 51, 51, 0.8)"
         });
 
         let animated = false;
 
         const animateSVG = () => {
           myPathC.attr({
-            stroke: 'rgba(249, 168, 37, 0.8)',
+            stroke: 'rgba(51, 51, 51, 0.8)',
             strokeWidth: 3,
             fill: 'none',
             "stroke-dasharray": "5 10",
@@ -124,7 +124,10 @@ const Process = () => {
     <section className="process-section text-center" id="Process">
       <div className="process-container">
         <div className="process-header">
-          <h2 className="rainbow-text rainbow-text-large rainbow-text-extrabold">Three Simple Steps To Get Started</h2>
+          <h2 className="rainbow-text rainbow-text-large rainbow-text-extrabold">Getting started is easy</h2>
+          <p className="services-subtitle">
+            Our process is built for busy teams who want quality without the wait—simple, smooth, and stress-free.
+          </p>
         </div>
 
         <div className="process-steps">
