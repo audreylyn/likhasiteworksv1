@@ -20,6 +20,6 @@
       "scripts": {
             "dev": "vite",
             "build": "vite build",
-            "postinstall": "chmod +x node_modules/.bin/vite"
+            "postinstall": "node -e \"try { require('fs').chmodSync('node_modules/.bin/vite', 0o755); } catch (e) { console.log('Binary already executable or not found'); }\""
       }
 }
