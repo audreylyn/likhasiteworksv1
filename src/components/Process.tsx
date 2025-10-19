@@ -36,24 +36,15 @@ const Process = () => {
   ];
 
   useEffect(() => {
-    console.log('Process component mounted, initializing animation...');
-    
     // Wait for jQuery and Snap to be loaded
     const initAnimation = () => {
-      console.log('Checking for libraries...');
-      console.log('window.Snap:', typeof window.Snap);
-      console.log('window.jQuery:', typeof window.jQuery);
-      
       if (typeof window.Snap !== 'undefined' && typeof window.jQuery !== 'undefined') {
-        console.log('Both libraries loaded, starting animation setup...');
         const $ = window.jQuery;
         const Snap = window.Snap;
 
         const snapC = Snap("#svgC");
-        console.log('Snap SVG element:', snapC);
         
         if (!snapC || !snapC.node) {
-          console.error('Could not find SVG element #svgC');
           setTimeout(initAnimation, 200);
           return;
         }
@@ -68,21 +59,15 @@ const Process = () => {
           strokeDashoffset: "180"
         });
 
-        console.log('Path created:', myPathC);
-
         const Triangle = snapC.polyline("0, 30, 15, 0, 30, 30");
         Triangle.attr({
           id: "plane",
           fill: "rgba(249, 168, 37, 0.8)"
         });
 
-        console.log('Triangle created:', Triangle);
-
         let animated = false;
 
         const animateSVG = () => {
-          console.log('Starting SVG animation...');
-          
           myPathC.attr({
             stroke: 'rgba(249, 168, 37, 0.8)',
             strokeWidth: 3,
@@ -93,13 +78,11 @@ const Process = () => {
 
           const triangleGroup = snapC.g(Triangle);
           const pathLength = myPathC.getTotalLength();
-          console.log('Path length:', pathLength);
           
           setTimeout(() => {
-            console.log('Starting airplane movement animation...');
             Snap.animate(0, pathLength, (value: number) => {
               const movePoint = myPathC.getPointAtLength(value);
-              triangleGroup.transform('t' + parseInt(movePoint.x - 15) + ',' + parseInt(movePoint.y - 15) + 'r' + (movePoint.alpha - 90));
+              triangleGroup.transform(`t${movePoint.x - 15},${movePoint.y - 15}r${movePoint.alpha - 90}`);
             }, 2500);
           }, 0);
         };
@@ -112,7 +95,6 @@ const Process = () => {
             const windowHeight = $(window).height() || 0;
 
             if (scrollTop + windowHeight > sectionTop + 100) { // Trigger when section is 100px into view
-              console.log('Process section in view, starting animation...');
               animateSVG();
               animated = true;
             }
@@ -125,13 +107,11 @@ const Process = () => {
         const windowHeight = $(window).height() || 0;
 
         if (scrollTop + windowHeight > sectionTop + 100) {
-          console.log('Process section already in view on load, starting animation...');
           animateSVG();
           animated = true;
         }
       } else {
         // Retry after a short delay if libraries aren't loaded yet
-        console.log('Libraries not loaded yet, retrying...');
         setTimeout(initAnimation, 100);
       }
     };
