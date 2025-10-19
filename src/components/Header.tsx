@@ -101,10 +101,34 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const shouldHideBanner = () => {
+    // Hide when menu is open on About page
+    if (isMenuOpen && location.pathname === '/about') {
+      return true;
+    }
+
+    // Hide on Work, Our Story, Quote pages on mobile/tablet
+    if (shouldHideBannerOnMobile(location.pathname)) {
+      return true;
+    }
+
+    // Hide when menu is open (existing logic)
+    if (isMenuOpen) {
+      return true;
+    }
+
+    return false;
+  };
+
+  const shouldHideBannerOnMobile = (pathname) => {
+    const pagesToHide = ['/work', '/our-story', '/quote'];
+    return pagesToHide.includes(pathname);
+  };
+
   return (
     <>
       {/* Top Banner */}
-      <div className={`header-banner ${isMenuOpen ? 'header-banner--hidden' : ''}`}>
+      <div className={`header-banner ${shouldHideBanner() ? 'header-banner--hidden' : ''}`}>
         <div className="header-banner-content">
           <div className="header-banner-text">
             <div className="text-center">

@@ -77,8 +77,20 @@
   box-shadow: #FFD028 1px 1px 3px 3000px;
 }
 
+/* Hide banner when shouldHideBanner() returns true */
 .header-banner--hidden {
+  display: none !important;
+}
+
+.header-banner--mobile-hidden {
   display: none;
+}
+
+/* Hide banner on mobile/tablet for specific pages */
+@media (max-width: 767px) {
+  .header-banner--mobile-hidden {
+    display: none;
+  }
 }
 
 .main-navigation {

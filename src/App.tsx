@@ -8,6 +8,8 @@ import GetQuote from './pages/GetQuote';
 import NotFound from './pages/NotFound';
 import Loader from './components/Loader';
 import Rainbow from './components/Rainbow';
+import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import './styles/globals.css';
 
 // Component to handle dynamic titles with rainbow icons
@@ -34,6 +36,7 @@ export default function App() {
   return (
     <>
       <DynamicTitle />
+      <ScrollToTop />
       <Loader />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -43,6 +46,7 @@ export default function App() {
         <Route path="/quote" element={<GetQuote />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ScrollToTopButton />
     </>
   );
 }
