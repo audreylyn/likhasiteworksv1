@@ -182,7 +182,7 @@
 
 .main-navigation-link:hover,
 .main-navigation-link.active {
-  color: #E6B800;
+  color: #2c2c2c;
 }
 
 .main-navigation-cta {
@@ -396,7 +396,7 @@
   min-height: 44px;
   border-radius: 99px;
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   color: rgb(51, 51, 51);
   text-decoration: none;

@@ -86,7 +86,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-header">
           <h6 className="contact-subtitle-small">Get a Free Consultation</h6>
-          <h2 className="contact-title">Let's Explore How We Can Work Together</h2>
+          <h2 className="contact-title rainbow-text rainbow-text-large rainbow-text-extrabold">Let's Explore How We Can Work Together</h2>
           <p className="contact-description">
             Our team will work with you to understand your business needs, your goals, and your vision. We'll listen carefully,
             and then provide you with a detailed plan of action outlining the steps we'll take to bring your project to life.

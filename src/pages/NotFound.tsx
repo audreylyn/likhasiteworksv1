@@ -30,7 +30,6 @@ const NotFound = () => {
         </div>
       </section>
       <Footer />
-      <BottomNavigation />
     </div>
   );
 };

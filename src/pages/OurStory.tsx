@@ -16,7 +16,6 @@ const OurStory = () => {
         </div>
       </section>
       <Footer />
-      <BottomNavigation />
     </div>
   );
 };

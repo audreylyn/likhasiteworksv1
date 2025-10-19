@@ -144,7 +144,7 @@ const Process = () => {
     <section className="process-section text-center" id="Process">
       <div className="process-container">
         <div className="process-header">
-          <span className="rainbow-text rainbow-text-large rainbow-text-extrabold">Three Simple Steps To Get Started</span>
+          <h2 className="rainbow-text rainbow-text-large rainbow-text-extrabold">Three Simple Steps To Get Started</h2>
         </div>
 
         <div className="process-steps">

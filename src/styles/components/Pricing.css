@@ -1,6 +1,6 @@
 /* Pricing Section */
 .pricing-section {
-  padding: 80px 20px 100px;
+  padding: 120px 20px 100px; /* Increased padding for better spacing */
   background-color: #f9f4ef;
   position: relative;
 }
@@ -12,23 +12,24 @@
 
 .pricing-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px; /* Increased from 60px */
 }
 
 .pricing-title {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 3.25rem; /* Increased from 48px */
+  font-weight: 800; /* Increased from 700 */
   color: rgb(31, 31, 31);
-  margin-bottom: 16px;
-  line-height: 1.2;
+  margin-bottom: 20px; /* Increased from 16px */
+  line-height: 1.1; /* Tighter line height */
 }
 
 .pricing-subtitle {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 1.25rem; /* Increased from 18px */
+  font-weight: 400;
+  line-height: 1.7; /* Increased from 1.6 */
   color: rgb(31, 31, 31);
-  opacity: 0.9;
-  max-width: 600px;
+  opacity: 0.85;
+  max-width: 650px; /* Increased from 600px */
   margin: 0 auto;
 }
 
@@ -40,7 +41,7 @@
   align-items: stretch;
   width: 100%;
   margin: 0 auto 3em;
-  gap: 2em;
+  gap: 3em; /* Increased from 2em */
 }
 
 .pricing-item {
@@ -50,7 +51,7 @@
   align-items: stretch;
   text-align: center;
   flex: 0 1 340px;
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Updated to Montserrat */
   cursor: default;
   color: rgb(31, 31, 31);
   background: #fff;
@@ -128,23 +129,19 @@
   transform: translate3d(10px, 0, 0);
 }
 
-.pricing-item:hover .deco-layer--4 {
-  transform: translate3d(-10px, 0, 0);
-}
-
 .pricing-price {
-  font-size: 4em;
-  font-weight: 800;
+  font-size: 4.5em; /* Increased from 4em */
+  font-weight: 900; /* Increased from 800 */
   padding: 0;
   color: rgb(31, 31, 31);
   margin: 0;
-  line-height: 1;
+  line-height: 0.9; /* Tighter line height */
   position: relative;
   z-index: 10;
 }
 
 .pricing-currency {
-  font-size: 0.5em;
+  font-size: 0.45em; /* Slightly reduced from 0.5em */
   vertical-align: top;
   color: rgb(31, 31, 31);
   font-weight: 700;
@@ -162,7 +159,7 @@
 
 .pricing-feature-list {
   margin: 0;
-  padding: 1.5em 2em 2em;
+  padding: 2em 2.5em 2.5em; /* Increased padding */
   list-style: none;
   text-align: left;
   flex-grow: 1;
@@ -171,12 +168,13 @@
 }
 
 .pricing-feature {
-  padding: 0.75em 0;
-  font-size: 15px;
-  color: rgb(31, 31, 31);
+  padding: 1rem 0; /* Increased from 0.75em */
+  font-size: 1rem; /* Increased from 15px */
   font-weight: 500;
+  color: rgb(31, 31, 31);
   position: relative;
-  padding-left: 1.5em;
+  padding-left: 2rem; /* Increased from 1.5em */
+  line-height: 1.6; /* Added line height */
 }
 
 .pricing-feature::before {
@@ -184,20 +182,22 @@
   position: absolute;
   left: 0;
   color: #FFD028;
-  font-weight: 700;
+  font-weight: 800; /* Increased from 700 */
+  font-size: 1.1em; /* Slightly larger checkmark */
 }
 
 .pricing-action {
-  font-weight: 700;
-  margin: 0 2em 2em 2em;
-  padding: 1em 2em;
+  font-weight: 800; /* Increased from 700 */
+  margin: 0 2.5em 2.5em 2.5em; /* Increased margins */
+  padding: 1.2em 2.5em; /* Increased padding */
   color: rgb(31, 31, 31);
   border-radius: 12px;
   background: #FFD028;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 16px;
+  font-size: 1.125rem; /* Increased from 16px */
+  font-family: 'Montserrat', sans-serif; /* Added font family */
 }
 
 .pricing-badge {
@@ -207,10 +207,10 @@
   transform: translateX(-50%);
   background: #E6B800;
   color: white;
-  padding: 8px 20px;
+  padding: 10px 24px; /* Increased padding */
   border-radius: 20px;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 0.875rem; /* Increased from 13px */
+  font-weight: 800; /* Increased from 700 */
   letter-spacing: 0.5px;
   z-index: 10;
   box-shadow: 0 4px 12px rgba(230, 184, 0, 0.4);
@@ -222,7 +222,7 @@
   color: white;
   outline: none;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(230, 184, 0, 0.4);
+  box-shadow: 0 6px 16px rgba(230, 184, 0, 0.4); /* Increased shadow */
 }
 
 /* Envelope Button */
@@ -241,7 +241,7 @@
   box-shadow: inset 0 0 20px rgb(31, 31, 31);
   font-family: 'Bricolage Grotesque', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
   white-space: nowrap;
   transition: var(--transition);
@@ -346,7 +346,7 @@
 
 @media (max-width: 1024px) {
   .pricing-title {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   .pricing-palden {
@@ -373,11 +373,11 @@
   }
 
   .pricing-title {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 
   .pricing-subtitle {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .pricing-header {
@@ -399,7 +399,7 @@
 
 @media (max-width: 640px) {
   .pricing-title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   .pricing-price {
@@ -418,12 +418,12 @@
 
   .envelop-btn__text-inner {
     padding: 0.9em 1.5em;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .pricing-feature {
     padding: 0.6em 0;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   
   .pricing-feature-list {

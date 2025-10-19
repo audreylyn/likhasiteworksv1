@@ -203,7 +203,6 @@ const GetQuote = () => {
         </div>
 
         <Footer />
-        <BottomNavigation />
       </div>
     </div>
   );

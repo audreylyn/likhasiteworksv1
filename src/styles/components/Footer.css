@@ -27,7 +27,12 @@
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 16px;
-  color: #FFD028;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+}
+
+.footer-logo span {
+  display: inline-block;
 }
 
 .footer-description {
@@ -139,6 +144,11 @@
     grid-template-columns: 1fr;
     gap: 30px;
     padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
   }
 
   .footer-bottom {

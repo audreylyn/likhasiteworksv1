@@ -31,10 +31,22 @@
 }
 
 .quote-highlight {
-  background: linear-gradient(180deg, transparent 65%, #FFD028 65%);
+  position: relative;
   display: inline-block;
+  z-index: 1;
   padding: 0 8px;
   margin-left: -8px;
+}
+
+.quote-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+  right: 8px;
+  height: 7px;
+  background-color: #FFE066;
+  z-index: -1;
 }
 
 .quote-description {

@@ -40,7 +40,7 @@ const Services = () => {
     <section className="services-section" id="Services">
       <div className="services-container">
         <div className="services-header">
-          <span className="rainbow-text rainbow-text-large rainbow-text-extrabold">Exclusive Services</span>
+          <h2 className="rainbow-text rainbow-text-large rainbow-text-extrabold">Exclusive Services</h2>
           <p className="services-subtitle">
             Comprehensive digital solutions tailored to your business needs. We deliver quality services that help you grow and succeed.
           </p>

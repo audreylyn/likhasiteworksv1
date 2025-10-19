@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/components/Hero.css';
 import StackIcon from 'tech-stack-icons';
+import heroImg from '../assets/images/hero-img.png';
 
 const Hero = () => {
   const techStacks = [
@@ -41,8 +42,8 @@ const Hero = () => {
           {/* Right Side - Illustration */}
           <div className="hero-illustration">
             <img 
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80" 
-              alt="Web Design Illustration" 
+              src={heroImg} 
+              alt="Hero Illustration" 
               className="hero-image"
             />
           </div>

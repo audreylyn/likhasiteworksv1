@@ -48,7 +48,7 @@ const FAQs = () => {
     <section className="faqs-section" id="FAQs">
       <div className="faqs-container">
         <div className="faqs-header">
-          <span className="rainbow-text rainbow-text-large rainbow-text-extrabold">Frequently Asked Questions</span>
+          <h2 className="rainbow-text rainbow-text-large rainbow-text-extrabold">Frequently Asked Questions</h2>
           <p className="faqs-subtitle">
             Find answers to common questions about our services and process
           </p>

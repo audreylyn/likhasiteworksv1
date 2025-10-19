@@ -16,7 +16,6 @@ const Work = () => {
         </div>
       </section>
       <Footer />
-      <BottomNavigation />
     </div>
   );
 };

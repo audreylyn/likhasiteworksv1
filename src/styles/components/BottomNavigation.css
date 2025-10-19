@@ -84,9 +84,9 @@
 }
 
 .bottom-navigation-item:not(.active) .bottom-navigation-link:hover .bottom-navigation-number {
-  background-color: #FFD028;
+  background-color: rgb(31, 31, 31);
   color: white;
-  border-color: #FFD028;
+  border-color: rgb(31, 31, 31);
 }
 
 .bottom-navigation-item:not(.active) .bottom-navigation-link:hover .bottom-navigation-label {

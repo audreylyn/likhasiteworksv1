@@ -7,8 +7,9 @@
 .about-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 500px;
+  min-height: 350px;
   align-items: stretch;
+  gap: 0;
 }
 
 .about-hero-image {
@@ -24,38 +25,41 @@
 
 .about-hero-content {
   background-color: #FFE066;
-  padding: 60px 80px;
+  padding: 80px 60px; /* Increased padding */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .about-hero-title {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 24px;
+  font-size: 3rem; /* Increased from 42px */
+  font-weight: 800; /* Increased from 700 */
+  line-height: 1.1; /* Tighter line height */
+  margin-bottom: 32px; /* Increased from 24px */
   color: rgb(31, 31, 31);
 }
 
 .about-hero-description {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 32px;
+  font-size: 18px; /* Increased from 16px */
+  font-weight: 400;
+  line-height: 1.7; /* Increased from 1.6 */
+  margin-bottom: 40px; /* Increased from 32px */
   color: rgb(31, 31, 31);
+  opacity: 0.9;
 }
 
 .about-hero-cta {
   background-color: rgb(31, 31, 31);
   color: white;
-  font-size: 14px;
+  font-size: 16px; /* Increased from 14px */
   font-weight: 700;
-  letter-spacing: 1px;
-  padding: 16px 32px;
+  letter-spacing: 1.2px; /* Increased from 1px */
+  padding: 18px 36px; /* Increased from 16px 32px */
   border: none;
   cursor: pointer;
   align-self: flex-start;
   transition: all 0.3s ease;
+  border-radius: 6px; /* Added border radius */
 }
 
 .about-hero-cta:hover {
@@ -65,7 +69,7 @@
 
 /* Why Us Section */
 .about-why-us {
-  padding: 60px 20px 100px;
+  padding: 100px 20px 120px; /* Increased padding */
   background-color: #f9f4ef;
 }
 
@@ -74,16 +78,16 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px; /* Increased from 60px */
   align-items: start;
 }
 
 .about-why-us-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 16px;
+  font-size: 2.625rem; /* Increased from 36px */
+  font-weight: 800; /* Increased from 700 */
+  margin-bottom: 24px; /* Increased from 16px */
   color: rgb(31, 31, 31);
-  line-height: 1.2;
+  line-height: 1.1; /* Tighter line height */
 }
 
 .about-why-us-title .rainbow-text {
@@ -91,9 +95,10 @@
 }
 
 .about-why-us-description {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 40px;
+  font-size: 18px; /* Increased from 16px */
+  font-weight: 400;
+  line-height: 1.7; /* Increased from 1.6 */
+  margin-bottom: 50px; /* Increased from 40px */
   color: rgb(31, 31, 31);
   opacity: 0.8;
 }
@@ -103,7 +108,7 @@
   margin: 40px 0 30px;
 }
 
-.about-stats-svg {
+.about-stats-img {
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -261,7 +266,7 @@
   }
 
   .about-hero-title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   .about-why-us-container {
@@ -273,8 +278,13 @@
     grid-template-columns: 1fr 1fr;
   }
   
-  .about-stats-svg {
+  .about-stats-img {
     max-width: 400px;
+  }
+
+  .about-stats-img, about-stats-illustration,
+  .about-stats-numbers {
+    text-align: center;
   }
 }
 
@@ -284,7 +294,7 @@
   }
 
   .about-hero-title {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .about-hero-cta {
@@ -297,14 +307,14 @@
   }
 
   .about-why-us-title {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .about-stats-numbers {
     grid-template-columns: 1fr;
   }
   
-  .about-stats-svg {
+  .about-stats-img {
     max-width: 320px;
   }
 

@@ -49,7 +49,7 @@ const Pricing = () => {
     <section className="pricing-section" id="Plans">
       <div className="pricing-container">
         <div className="pricing-header">
-          <span className="rainbow-text rainbow-text-large rainbow-text-extrabold">Special Limited Offer</span>
+          <h2 className="rainbow-text rainbow-text-large rainbow-text-extrabold">Special Limited Offer</h2>
           <p className="pricing-subtitle">
             Starting from just ₱799! Discounted prices - limited slots available
           </p>

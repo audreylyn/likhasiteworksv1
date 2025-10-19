@@ -30,7 +30,6 @@
   cursor: pointer;
   
   /* Prevent text wrapping */
-  white-space: nowrap;
   display: inline-block;
 }
 

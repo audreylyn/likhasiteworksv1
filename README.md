@@ -1,7 +1,7 @@
 
  # Likha Site Works - FAQ Page
 
-A modern, responsive FAQ page built with React and Vite. This project was created based on the design specifications from [Figma](https://www.figma.com/design/A4p1Kn3GTA2AuCv3qKLz2Q/www_ohhmyads_com_FAQs_1920w_1440w_1024w_768w_default).
+A modern, responsive FAQ page built with React and Vite. 
 
 ## Features
 

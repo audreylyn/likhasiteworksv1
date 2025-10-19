@@ -2,6 +2,38 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/components/Footer.css';
 
+const StaticLogo = () => {
+  const colors = [
+    { main: '#FBDB4A' }, // l
+    { main: '#F3934A' }, // i
+    { main: '#EB547D' }, // k
+    { main: '#9F6AA7' }, // h
+    { main: '#5476B3' }, // a
+    { main: '#FBDB4A' }, // (space)
+    { main: '#2BB19B' }, // s
+    { main: '#70B984' }, // i
+    { main: '#F3934A' }, // t
+    { main: '#EB547D' }, // e
+    { main: '#9F6AA7' }, // w
+    { main: '#5476B3' }, // o
+    { main: '#2BB19B' }, // r
+    { main: '#70B984' }, // k
+    { main: '#F3934A' }  // s
+  ];
+
+  const text = 'likha siteworks';
+
+  return (
+    <h3 className="footer-logo">
+      {text.split('').map((char, index) => (
+        <span key={index} style={{ color: colors[index]?.main || '#FFD028' }}>
+          {char === ' ' ? '\u00A0' : char}
+        </span>
+      ))}
+    </h3>
+  );
+};
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -10,7 +42,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3 className="footer-logo">likha siteworks</h3>
+            <StaticLogo />
             <p className="footer-description">
               We create exceptional digital experiences that help businesses grow and succeed in the modern world.
             </p>

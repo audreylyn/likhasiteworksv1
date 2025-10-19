@@ -36,7 +36,7 @@
   position: relative;
   color: #1a1a1a;
   margin-bottom: 15px;
-  font-size: 36px;
+  font-size: 2.25rem;
   font-weight: 600;
 }
 
@@ -114,7 +114,7 @@
   box-shadow: 0 12px 20px 0 rgba(249, 168, 37, 0.4);
   color: #ffffff;
   display: inline-block;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   height: 50px;
   right: 0;
@@ -179,7 +179,7 @@
 
 /* Step Description */
 .step-desc h4 {
-  font-size: 22px;
+  font-size: 1.375rem;
   margin-bottom: 15px;
   font-weight: 600;
   color: #1a1a1a;
@@ -314,7 +314,7 @@
   }
 
   .process-title {
-    font-size: 32px;
+    font-size: 2rem;
   }
 
   .step-icon {
@@ -327,13 +327,13 @@
     width: 45px;
     height: 45px;
     line-height: 45px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .process-title {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   .step-icon {
@@ -343,6 +343,6 @@
   }
 
   .step-desc h4 {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
