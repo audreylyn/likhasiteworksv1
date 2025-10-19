@@ -1,7 +1,7 @@
 /* Work Section */
 .work-section {
   padding: 100px 20px 180px;
-  background-color: rgb(255, 253, 235);
+  background-color: #f9f4ef;
 }
 
 .work-container {
@@ -78,7 +78,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 224, 102, 0.9) 0%, rgba(237, 87, 36, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(255, 224, 102, 0.9) 0%, rgba(245, 166, 35, 0.9) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,7 +104,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: rgb(237, 87, 36);
+  color: #FFD028;
   margin-bottom: 8px;
 }
 

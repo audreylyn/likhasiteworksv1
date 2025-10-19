@@ -7,10 +7,10 @@ const BottomNavigation = () => {
   const navItems = [
     { number: '01', label: 'About', href: '#About' },
     { number: '02', label: 'Process', href: '#Process' },
-    { number: '03', label: 'Services', href: '#Services', hiddenOnMobile: true },
-    { number: '04', label: 'Work', href: '#Work' },
-    { number: '05', label: 'Pricing', href: '#Plans', hiddenOnMobile: true },
-    { number: '06', label: 'FAQs', href: '#FAQs', hiddenOnMobile: true },
+    { number: '03', label: 'Services', href: '#Services' },
+    { number: '04', label: 'Pricing', href: '#Plans' },
+    { number: '05', label: 'FAQs', href: '#FAQs' },
+    { number: '06', label: 'Contact', href: '#Contact' },
   ];
 
   useEffect(() => {
@@ -45,8 +45,8 @@ const BottomNavigation = () => {
           <div
             key={index}
             className={`bottom-navigation-item ${
-              item.hiddenOnMobile ? 'bottom-navigation-item-hidden-mobile' : ''
-            } ${isActive ? 'active' : ''}`}
+              isActive ? 'active' : ''
+            }`}
           >
             <a href={item.href} className="bottom-navigation-link">
               <span className="bottom-navigation-number">{item.number}</span>

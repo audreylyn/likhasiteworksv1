@@ -6,7 +6,7 @@
   top: 0;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background-color: rgb(237, 87, 36);
+  background-color: #FFD028;
   color: white;
   padding: 0 1.5rem;
   z-index: 200;
@@ -22,21 +22,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  font-size: 14px;
-  line-height: 19.6px;
-  padding: 10px 0 0.75rem 0;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 12px 0 12px 0;
+  color: rgb(51, 51, 51);
 }
 
 .header-banner-link {
   text-align: center;
-  border-bottom: 0.8px dashed rgb(255, 219, 190);
-  color: rgb(255, 219, 190);
-  line-height: 18.2px;
+  border-bottom: 1px solid rgb(51, 51, 51);
+  color: rgb(51, 51, 51);
+  line-height: 1.2;
   text-decoration: none;
+  font-weight: 600;
+}
+
+.header-banner-link:hover {
+  color: #E6B800;
+  border-bottom-color: #E6B800;
 }
 
 .header-banner-corner {
@@ -67,13 +74,13 @@
 .header-banner-corner-shape-left {
   left: 0;
   top: 0;
-  box-shadow: rgb(237, 87, 36) 1px 1px 3px 3000px;
+  box-shadow: #FFD028 1px 1px 3px 3000px;
 }
 
 .header-banner-corner-shape-right {
   top: 0;
   right: 0;
-  box-shadow: rgb(237, 87, 36) 1px 1px 3px 3000px;
+  box-shadow: #FFD028 1px 1px 3px 3000px;
 }
 
 .main-navigation {
@@ -83,7 +90,7 @@
   position: sticky;
   width: 100%;
   top: 0;
-  background-color: rgb(255, 253, 235);
+  background-color: #f9f4ef;
   padding: 0 1rem;
   z-index: 180;
 }
@@ -164,7 +171,7 @@
   vertical-align: top;
   margin-left: 4px;
   margin-right: 8px;
-  color: rgb(108, 99, 84);
+  color: rgb(51, 51, 51);
   font-size: 18px;
   line-height: 24px;
   max-width: 1360px;
@@ -173,16 +180,17 @@
   transition: color 0.3s ease;
 }
 
-.main-navigation-link:hover {
-  color: rgb(237, 87, 36);
+.main-navigation-link:hover,
+.main-navigation-link.active {
+  color: #E6B800;
 }
 
 .main-navigation-cta {
   display: inline-block;
   align-items: center;
-  background-color: rgb(237, 87, 36);
+  background-color: #FFD028;
   border-radius: 100px;
-  color: white;
+  color: rgb(51, 51, 51);
   font-weight: 500;
   padding: 0.75rem 1.5rem;
   font-size: 18px;
@@ -193,7 +201,7 @@
 }
 
 .main-navigation-cta:hover {
-  background-color: rgb(220, 70, 20);
+  background-color: #E6B800;
   transform: translateY(-2px);
 }
 
@@ -221,7 +229,7 @@
 .hamburger span {
   width: 30px;
   height: 3px;
-  background-color: rgb(108, 99, 84);
+  background-color: rgb(51, 51, 51);
   border-radius: 10px;
   transition: all 0.3s ease;
   transform-origin: center;
@@ -254,7 +262,7 @@
   width: 80%;
   max-width: 400px;
   height: 100vh;
-  background-color: rgb(255, 253, 235);
+  background-color: #f9f4ef;
   z-index: 190;
   transition: right 0.3s ease;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -272,9 +280,10 @@
 }
 
 .mobile-menu-link {
+  display: block;
   font-size: 24px;
   font-weight: 500;
-  color: rgb(108, 99, 84);
+  color: rgb(51, 51, 51);
   text-decoration: none;
   padding: 15px 0;
   border-bottom: 1px solid rgba(108, 99, 84, 0.1);
@@ -282,14 +291,14 @@
 }
 
 .mobile-menu-link:hover {
-  color: rgb(237, 87, 36);
+  color: #E6B800;
   padding-left: 10px;
 }
 
 .mobile-menu-cta {
   display: inline-block;
-  background-color: rgb(237, 87, 36);
-  color: white;
+  background-color: #FFD028;
+  color: rgb(51, 51, 51);
   font-size: 20px;
   font-weight: 600;
   text-align: center;
@@ -301,8 +310,17 @@
 }
 
 .mobile-menu-cta:hover {
-  background-color: rgb(220, 70, 20);
+  background-color: #E6B800;
   transform: translateY(-2px);
+}
+
+/* Disabled state - no hover effects on quote page */
+.mobile-menu-cta--disabled,
+.mobile-menu-cta--disabled:hover,
+.mobile-menu-cta--disabled:active {
+  cursor: default !important;
+  background-color: #FFD028 !important;
+  transform: translateY(0) !important;
 }
 
 /* Mobile Menu Backdrop */
@@ -322,6 +340,215 @@
     opacity: 0;
   }
   to {
+    opacity: 1;
+  }
+}
+
+/* Animated Underline Styles */
+.text-draw {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.text-draw__text {
+  display: block;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.text-draw__box {
+  color: #FFD028;
+  width: 100%;
+  height: 0.625em;
+  position: relative;
+  margin-top: -0.2em;
+}
+
+.text-draw__box-svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: visible !important;
+  left: 0;
+  top: 0;
+}
+
+.text-draw__box-svg path {
+  stroke: currentColor;
+}
+
+/* Active state - show underline permanently */
+.text-draw.active .text-draw__box-svg path {
+  stroke-dasharray: 0 !important;
+  stroke-dashoffset: 0 !important;
+  opacity: 1;
+}
+
+/* Stars Button (Get a Quote) */
+.stars-btn {
+  --transition: all 0.3s;
+
+  display: inline-block;
+  min-width: 180px;
+  min-height: 44px;
+  border-radius: 99px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+  margin-left: 8px;
+}
+
+.stars-btn:focus {
+  box-shadow: 0 0 30px rgba(217, 255, 64, 0.5);
+}
+
+.stars-btn__inner,
+.stars-btn::after {
+  background: #FFD028;
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 99px;
+}
+
+.stars-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  transition: var(--transition);
+}
+
+.stars-btn__inner {
+  display: block;
+  padding: 12px 30px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.stars-btn__text {
+  position: relative;
+  z-index: 1;
+}
+
+.stars-btn__inner::after {
+  content: "";
+  display: block;
+  aspect-ratio: 1/2;
+  height: 130%;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='200' viewBox='0 0 100 200' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L50 200' stroke='%23333333' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E")
+    center center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: -25%;
+  top: 50%;
+  translate: 0 -50%;
+  transition: var(--transition);
+}
+
+.stars-btn__stars i {
+  width: 16px;
+  aspect-ratio: 1;
+  background: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 0L13.09 8.26L22 11L13.09 13.74L11 22L8.91 13.74L0 11L8.91 8.26L11 0Z' fill='%23333333'/%3E%3C/svg%3E")
+    center center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  rotate: -45deg;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.stars-btn__stars i:nth-child(1) {
+  top: 20%;
+  left: 7%;
+}
+
+.stars-btn__stars i:nth-child(2) {
+  top: 16%;
+  right: 5%;
+  scale: 0.72;
+}
+
+.stars-btn__stars i:nth-child(3) {
+  bottom: 20%;
+  left: 13%;
+  scale: 0.72;
+}
+
+.stars-btn__stars i:nth-child(4) {
+  bottom: 24%;
+  right: 9%;
+}
+
+/* Disabled state - no hover effects on quote page */
+.stars-btn--disabled,
+.stars-btn--disabled:hover,
+.stars-btn--disabled:active {
+  cursor: default !important;
+  rotate: 0deg !important;
+}
+
+.stars-btn--disabled::after,
+.stars-btn--disabled:hover::after,
+.stars-btn--disabled:active::after {
+  translate: 0 0 !important;
+}
+
+.stars-btn--disabled .stars-btn__inner::after,
+.stars-btn--disabled:hover .stars-btn__inner::after,
+.stars-btn--disabled:active .stars-btn__inner::after {
+  left: -25% !important;
+}
+
+.stars-btn--disabled i,
+.stars-btn--disabled:hover i,
+.stars-btn--disabled:active i {
+  rotate: -45deg !important;
+  opacity: 0 !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .stars-btn:hover {
+    rotate: -3.24deg;
+  }
+
+  .stars-btn:hover::after {
+    translate: -2% 10%;
+  }
+
+  .stars-btn:hover .stars-btn__inner::after {
+    left: 125%;
+  }
+
+  .stars-btn:hover i {
+    rotate: 0deg;
+    opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .stars-btn:active {
+    rotate: -3.24deg;
+  }
+
+  .stars-btn:active::after {
+    translate: -2% 10%;
+  }
+
+  .stars-btn:active .stars-btn__inner::after {
+    left: 125%;
+  }
+
+  .stars-btn:active i {
+    rotate: 0deg;
     opacity: 1;
   }
 }

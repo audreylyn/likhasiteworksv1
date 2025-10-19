@@ -1432,12 +1432,12 @@
     background-color: #e4ecee;
   }
 
-  .bg-\[rgb\(237\,_87\,_36\)\] {
-    background-color: #ed5724;
+  .bg-\[rgb\(245\,_166\,_35\)\] {
+    background-color: #F5A623;
   }
 
-  .bg-\[rgb\(237\,_87\,_37\)\] {
-    background-color: #ed5725;
+  .bg-\[rgb\(245\,_166\,_35\)\] {
+    background-color: #F5A623;
   }
 
   .bg-\[rgb\(246\,_246\,_248\)\] {
@@ -1465,7 +1465,7 @@
   }
 
   .bg-\[rgb\(255\,_253\,_235\)\] {
-    background-color: #fffdeb;
+    background-color: #f9f4ef;
   }
 
   .bg-\[rgb\(255\,_255\,_243\)\] {
@@ -2049,12 +2049,12 @@
     color: #b6b6b6;
   }
 
-  .text-\[rgb\(237\,_87\,_36\)\] {
-    color: #ed5724;
+  .text-\[rgb\(245\,_166\,_35\)\] {
+    color: #F5A623;
   }
 
-  .text-\[rgb\(237\,_87\,_37\)\] {
-    color: #ed5725;
+  .text-\[rgb\(245\,_166\,_35\)\] {
+    color: #F5A623;
   }
 
   .text-\[rgb\(255\,_219\,_190\)\] {
@@ -2155,13 +2155,13 @@
     opacity: 0;
   }
 
-  .shadow-\[rgb\(237\,87\,36\)_1px_1px_3px_3000px\] {
-    --tw-shadow-color: #ed5724;
+  .shadow-\[rgb\(245\,166\,35\)_1px_1px_3px_3000px\] {
+    --tw-shadow-color: #F5A623;
   }
 
   @supports (color: color-mix(in lab, red, red)) {
-    .shadow-\[rgb\(237\,87\,36\)_1px_1px_3px_3000px\] {
-      --tw-shadow-color: color-mix(in oklab, #ed5724 1px 1px 3px 3000px var(--tw-shadow-alpha), transparent);
+    .shadow-\[rgb\(245\,166\,35\)_1px_1px_3px_3000px\] {
+      --tw-shadow-color: color-mix(in oklab, #F5A623 1px 1px 3px 3000px var(--tw-shadow-alpha), transparent);
     }
   }
 

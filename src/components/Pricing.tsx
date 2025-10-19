@@ -5,48 +5,41 @@ const Pricing = () => {
   const plans = [
     {
       name: 'Starter',
-      price: '999',
-      period: 'mo',
+      price: '799',
+      originalPrice: '',
       features: [
-        '5 Page Website',
-        'Responsive Design',
-        'Basic SEO',
-        '1 Month Support',
-        'Contact Form',
-        'Social Media Integration'
+        'Static Website Design',
+        'Up to 5 Pages',
+        'Responsive Layout',
+        'Basic SEO'
       ],
       featured: false
     },
     {
       name: 'Professional',
-      price: '2,499',
-      period: 'mo',
+      price: '3,499',
+      originalPrice: '10,000',
       features: [
-        '15 Page Website',
-        'Advanced Responsive Design',
-        'Advanced SEO',
-        '3 Months Support',
-        'Custom Forms',
-        'Blog Integration',
-        'Analytics Setup',
-        'Priority Support'
+        'Dynamic Website',
+        'Up to 15 Pages',
+        'Free Hosting (1 Year)',
+        'Free Domain (1 Year)',
+        '1 Month Maintenance'
       ],
-      featured: true
+      featured: true,
+      badge: 'Most Popular'
     },
     {
-      name: 'Enterprise',
-      price: '4,999',
-      period: 'mo',
+      name: 'Premium',
+      price: '5,999',
+      originalPrice: '15,000',
       features: [
+        'Full-Featured Website',
         'Unlimited Pages',
-        'Custom Design System',
-        'Enterprise SEO',
-        '12 Months Support',
-        'Advanced Integrations',
-        'E-Commerce Ready',
-        'Performance Optimization',
-        'Dedicated Account Manager',
-        'Custom Features'
+        'Free Hosting (1 Year)',
+        'Free Domain (1 Year)',
+        '3 Months Maintenance',
+        'Advanced Features'
       ],
       featured: false
     }
@@ -56,9 +49,9 @@ const Pricing = () => {
     <section className="pricing-section" id="Plans">
       <div className="pricing-container">
         <div className="pricing-header">
-          <h2 className="pricing-title">Simple, Transparent Pricing</h2>
+          <span className="rainbow-text rainbow-text-large rainbow-text-extrabold">Special Limited Offer</span>
           <p className="pricing-subtitle">
-            Choose the perfect plan for your business needs
+            Starting from just ₱799! Discounted prices - limited slots available
           </p>
         </div>
 
@@ -68,6 +61,9 @@ const Pricing = () => {
               key={index} 
               className={`pricing-item ${plan.featured ? 'pricing-item--featured' : ''}`}
             >
+              {plan.badge && (
+                <div className="pricing-badge">{plan.badge}</div>
+              )}
               <div className="pricing-deco">
                 <svg 
                   className="pricing-deco-img" 
@@ -108,10 +104,12 @@ const Pricing = () => {
                   />
                 </svg>
                 <div className="pricing-price">
-                  <span className="pricing-currency">$</span>
+                  <span className="pricing-currency">₱</span>
                   {plan.price}
-                  <span className="pricing-period"> / {plan.period}</span>
                 </div>
+                {plan.originalPrice && (
+                  <div className="pricing-original">was ₱{plan.originalPrice}</div>
+                )}
                 <h3 className="pricing-plan-title">{plan.name}</h3>
               </div>
               <ul className="pricing-feature-list">
@@ -119,7 +117,22 @@ const Pricing = () => {
                   <li key={idx} className="pricing-feature">{feature}</li>
                 ))}
               </ul>
-              <button className="pricing-action">Choose plan</button>
+              <a href="/quote" className="envelop-btn">
+                <span className="envelop-btn__text">
+                  <span className="envelop-btn__text-inner">
+                    Get Started
+                    <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.125 16L9.125 9L2.125 2" stroke="#FFD028" strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  <span className="envelop-btn__text-inner">
+                    Get Started
+                    <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.125 16L9.125 9L2.125 2" stroke="#FFD028" strokeWidth="2.33333" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </span>
+              </a>
             </div>
           ))}
         </div>

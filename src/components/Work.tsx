@@ -46,7 +46,7 @@ const Work = () => {
     <section className="work-section" id="Work">
       <div className="work-container">
         <div className="work-header">
-          <h2 className="work-title">Our Work</h2>
+          <span className="rainbow-text rainbow-text-large rainbow-text-extrabold">Our Work</span>
           <p className="work-subtitle">
             Explore our portfolio of successful projects and satisfied clients
           </p>

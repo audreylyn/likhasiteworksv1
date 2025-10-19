@@ -10,7 +10,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(248, 240, 213);
+  background-color: #f3ede5;
   gap: 0;
   z-index: 1000;
   font-family: 'Inter', sans-serif;
@@ -30,24 +30,26 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  gap: 8px;
+  gap: 6px;
   z-index: 4;
+  padding: 0 8px;
   transition: background-color 0.3s ease;
 }
 
 .bottom-navigation-item.active {
-  background-color: rgb(237, 87, 36);
+  background-color: #FFD028;
 }
 
 .bottom-navigation-item.active .bottom-navigation-number {
-  background-color: white;
-  color: rgb(237, 87, 36);
-  border-color: white;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  border-color: rgb(31, 31, 31);
 }
 
 .bottom-navigation-item.active .bottom-navigation-label {
-  color: white;
+  color:  rgb(31, 31, 31);
   opacity: 1;
+  font-weight: 700;
 }
 
 .bottom-navigation-item-hidden-mobile {
@@ -66,39 +68,40 @@
   justify-content: center;
   width: 1.5rem;
   height: 1.5rem;
-  border: 0.8px solid rgb(226, 210, 169);
-  color: rgb(108, 99, 84);
+  border: 1px solid rgb(200, 190, 170);
+  color: rgb(31, 31, 31);
   font-size: 12px;
   border-radius: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .bottom-navigation-link {
   display: flex;
-  gap: 3px;
+  gap: 6px;
   align-items: center;
 }
 
-.bottom-navigation-link:hover .bottom-navigation-number {
-  background-color: rgb(237, 87, 36);
+.bottom-navigation-item:not(.active) .bottom-navigation-link:hover .bottom-navigation-number {
+  background-color: #FFD028;
   color: white;
-  border-color: rgb(237, 87, 36);
+  border-color: #FFD028;
+}
+
+.bottom-navigation-item:not(.active) .bottom-navigation-link:hover .bottom-navigation-label {
+  color: rgb(31, 31, 31);
+  opacity: 1;
 }
 
 .bottom-navigation-label {
   display: block;
-  font-weight: 500;
-  color: rgb(108, 99, 84);
-  opacity: 0.8;
+  font-weight: 700;
+  font-size: 13px;
+  color: rgb(31, 31, 31);
+  opacity: 1;
   text-decoration: none;
   transition: color 0.3s ease, opacity 0.3s ease;
-}
-
-.bottom-navigation-link:hover .bottom-navigation-label {
-  color: rgb(237, 87, 36);
-  opacity: 1;
 }
 
 .bottom-navigation-full-link {
@@ -109,6 +112,6 @@
   top: 0;
   right: 0;
   bottom: 0;
-  color: rgb(108, 99, 84);
+  color: rgb(51, 51, 51);
   z-index: -2;
 }

@@ -1,7 +1,7 @@
 /* Services Section */
 .services-section {
   padding: 115px 20px 180px;
-  background-color: rgb(248, 240, 213);
+  background-color: #f9f4ef;
 }
 
 .services-container {
@@ -32,7 +32,7 @@
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background-color: rgb(237, 87, 36);
+  background-color: #FFD028;
   border-radius: 3px;
 }
 
@@ -51,7 +51,7 @@
 .services-subtitle {
   font-size: 16px;
   line-height: 1.6;
-  color: rgb(40, 40, 40);
+  color: rgb(31, 31, 31);
   max-width: 700px;
   margin: 0 auto;
 }
@@ -85,7 +85,7 @@
   transform: translate(40%, -40%);
   width: 150px;
   height: 150px;
-  background-color: rgb(237, 87, 36);
+  background-color: #FFD028;
   border: 6px solid #FFE066;
   border-radius: 50%;
   opacity: 0.5;
@@ -106,7 +106,7 @@
   display: inline-block;
   width: 70px;
   height: 70px;
-  background-color: rgb(237, 87, 36);
+  background-color: #FFD028;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -120,12 +120,12 @@
 }
 
 .service-icon {
-  color: white;
+  color: rgb(31, 31, 31);
   transition: color 0.3s ease;
 }
 
 .service-card:hover .service-icon {
-  color: rgb(237, 87, 36);
+  color: rgb(31, 31, 31);
 }
 
 .service-title {
@@ -137,7 +137,7 @@
 }
 
 .service-card:hover .service-title {
-  color: white;
+  color: rgb(31, 31, 31);
 }
 
 .service-description {
@@ -149,7 +149,7 @@
 }
 
 .service-card:hover .service-description {
-  color: white;
+  color: rgb(31, 31, 31);
 }
 
 .service-link {
@@ -163,7 +163,7 @@
 }
 
 .service-card:hover .service-link {
-  color: white;
+  color: rgb(31, 31, 31);
 }
 
 .service-link::after {
@@ -173,7 +173,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background-color: rgb(237, 87, 36);
+  background-color: #FFD028;
   transition: background-color 0.3s ease;
 }
 

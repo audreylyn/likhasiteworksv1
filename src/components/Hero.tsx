@@ -4,14 +4,15 @@ import StackIcon from 'tech-stack-icons';
 
 const Hero = () => {
   const techStacks = [
-    'reactjs',
     'html5',
     'css3',
-    'javascript',
+    'js',
+    'react',
+    'tailwindcss',
+    'typescript',
     'php',
     'bootstrap5',
     'figma',
-    'typescript',
   ];
 
   return (
@@ -40,7 +41,7 @@ const Hero = () => {
           {/* Right Side - Illustration */}
           <div className="hero-illustration">
             <img 
-              src="https://i.imgur.com/6QKjFVz.png" 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80" 
               alt="Web Design Illustration" 
               className="hero-image"
             />

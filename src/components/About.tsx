@@ -22,11 +22,6 @@ const About = () => {
       description: 'We understand the importance of timely delivery. Our streamlined processes and dedicated team ensure quick turnaround times without compromising on quality.'
     },
     {
-      Icon: Briefcase,
-      title: 'Diverse Expertise',
-      description: 'Our team brings together diverse skills and experiences across multiple technologies and industries, allowing us to tackle any challenge that comes our way.'
-    },
-    {
       Icon: DollarSign,
       title: 'Reasonable Pricing',
       description: 'Quality doesn\'t have to break the bank. We offer competitive pricing that provides excellent value for businesses of all sizes.'
@@ -37,11 +32,6 @@ const About = () => {
       description: 'Count on us to be there when you need us. We adapt to your changing requirements and maintain consistent communication throughout the project.'
     },
     {
-      Icon: User,
-      title: 'Dedicated Project Manager',
-      description: 'Every project gets a dedicated manager who serves as your single point of contact, ensuring smooth communication and project coordination.'
-    },
-    {
       Icon: Gift,
       title: 'Post-Delivery Support',
       description: 'Our commitment doesn\'t end at delivery. We provide ongoing support and maintenance to ensure your solution continues to perform optimally.'
@@ -49,10 +39,8 @@ const About = () => {
   ];
 
   const stats = [
-    { number: '5,000+', label: 'Happy Clients from all Over the Globe' },
-    { number: '30,000+', label: 'Projects from All Shapes and Sizes Completed' },
-    { number: '150+', label: 'Dedicated Team of 150+ In-House Experts' },
-    { number: '17 Yrs', label: 'Delivering Exceptional Quality Since 2007' }
+    { number: 'Begun', label: 'Freelance Web Development Journey' },
+    { number: '5,000+', label: 'Clients from diverse Backgrounds' }
   ];
 
   return (
@@ -61,7 +49,7 @@ const About = () => {
       <div className="about-hero">
         <div className="about-hero-image">
           <img 
-            src="https://i.imgur.com/8kZJN5d.jpg" 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop&q=80" 
             alt="Office workspace"
           />
         </div>
@@ -72,9 +60,9 @@ const About = () => {
           <p className="about-hero-description">
             We offer a reliable and easy-to-use web development service that empowers you to take control of your project from start to finish. With a commitment to direct and open communication, high code quality, and a reliable post-delivery support, we help you scale your business and achieve your goals.
           </p>
-          <button className="about-hero-cta">
+          <a href="#Contact" className="about-hero-cta">
             START A CONVERSATION
-          </button>
+          </a>
         </div>
       </div>
 

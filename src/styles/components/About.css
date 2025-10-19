@@ -1,6 +1,6 @@
 .about-section {
   width: 100%;
-  background-color: rgb(255, 253, 235);
+  background-color: #f9f4ef;
 }
 
 /* Hero Section */
@@ -65,8 +65,8 @@
 
 /* Why Us Section */
 .about-why-us {
-  padding: 80px 20px 180px;
-  background-color: rgb(255, 253, 235);
+  padding: 60px 20px 100px;
+  background-color: #f9f4ef;
 }
 
 .about-why-us-container {

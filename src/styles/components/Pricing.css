@@ -1,8 +1,7 @@
 /* Pricing Section */
 .pricing-section {
-  padding: 100px 20px 180px;
-  background-color: rgb(255, 253, 235);
-  min-height: 100vh;
+  padding: 80px 20px 100px;
+  background-color: #f9f4ef;
   position: relative;
 }
 
@@ -28,7 +27,7 @@
   font-size: 18px;
   line-height: 1.6;
   color: rgb(31, 31, 31);
-  opacity: 0.75;
+  opacity: 0.9;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -38,8 +37,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
   width: 100%;
   margin: 0 auto 3em;
+  gap: 2em;
 }
 
 .pricing-item {
@@ -48,39 +49,56 @@
   flex-direction: column;
   align-items: stretch;
   text-align: center;
-  flex: 0 1 330px;
+  flex: 0 1 340px;
   font-family: 'Bricolage Grotesque', sans-serif;
   cursor: default;
-  color: rgb(132, 105, 124);
+  color: rgb(31, 31, 31);
   background: #fff;
-  box-shadow: 0 0 10px rgba(237, 87, 36, 0.2);
-  border-radius: 20px 20px 10px 10px;
-  margin: 1em;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.pricing-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border-color: #FFE066;
 }
 
 .pricing-item--featured {
-  margin: 0;
   z-index: 10;
-  box-shadow: 0 0 20px rgba(237, 87, 36, 0.3);
+  border-color: #FFD028;
+  box-shadow: 0 8px 32px rgba(255, 208, 40, 0.25);
+  transform: scale(1.08);
+  margin-top: -1em;
+  margin-bottom: 1em;
+}
+
+.pricing-item--featured:hover {
+  border-color: #FFD028;
+  box-shadow: 0 12px 48px rgba(255, 208, 40, 0.35);
+  transform: scale(1.08) translateY(-8px);
 }
 
 .pricing-deco {
-  border-radius: 10px 10px 0 0;
-  background: rgb(237, 87, 36);
-  padding: 4em 0 9em;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(135deg, #FFD028 0%, #FFE066 100%);
+  padding: 3em 2em 2em;
   position: relative;
 }
 
 .pricing-item--featured .pricing-deco {
-  padding: 5em 0 8.885em 0;
+  background: linear-gradient(135deg, #FFD028 0%, #FFC700 100%);
 }
 
 .pricing-deco-img {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
   width: 100%;
-  height: 160px;
+  height: 80px;
+  z-index: 5;
 }
 
 .pricing-plan-title {
@@ -88,11 +106,14 @@
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: #fff;
+  color: rgb(31, 31, 31);
+  font-weight: 700;
+  position: relative;
+  z-index: 10;
 }
 
 .deco-layer {
-  transition: transform 0.5s;
+  transition: transform 0.5s ease;
 }
 
 .pricing-item:hover .deco-layer--1 {
@@ -103,67 +124,223 @@
   transform: translate3d(-15px, 0, 0);
 }
 
+.pricing-item:hover .deco-layer--3 {
+  transform: translate3d(10px, 0, 0);
+}
+
+.pricing-item:hover .deco-layer--4 {
+  transform: translate3d(-10px, 0, 0);
+}
+
 .pricing-price {
-  font-size: 5em;
-  font-weight: bold;
+  font-size: 4em;
+  font-weight: 800;
   padding: 0;
-  color: #fff;
-  margin: 0 0 0.25em 0;
-  line-height: 0.75;
+  color: rgb(31, 31, 31);
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  z-index: 10;
 }
 
 .pricing-currency {
-  font-size: 0.15em;
+  font-size: 0.5em;
   vertical-align: top;
+  color: rgb(31, 31, 31);
+  font-weight: 700;
 }
 
-.pricing-period {
-  font-size: 0.15em;
-  padding: 0 0 0 0.5em;
-  font-style: italic;
+.pricing-original {
+  font-size: 0.9em;
+  color: rgb(31, 31, 31);
+  opacity: 0.6;
+  text-decoration: line-through;
+  margin-top: 0.5em;
+  position: relative;
+  z-index: 10;
 }
 
 .pricing-feature-list {
   margin: 0;
-  padding: 0.25em 0 2.5em;
+  padding: 1.5em 2em 2em;
   list-style: none;
-  text-align: center;
+  text-align: left;
+  flex-grow: 1;
+  position: relative;
+  z-index: 10;
 }
 
 .pricing-feature {
-  padding: 1em 0;
+  padding: 0.75em 0;
   font-size: 15px;
   color: rgb(31, 31, 31);
+  font-weight: 500;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.pricing-feature::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #FFD028;
+  font-weight: 700;
 }
 
 .pricing-action {
-  font-weight: bold;
-  margin: auto 3em 2em 3em;
+  font-weight: 700;
+  margin: 0 2em 2em 2em;
   padding: 1em 2em;
-  color: #fff;
-  border-radius: 30px;
-  background: rgb(237, 87, 36);
+  color: rgb(31, 31, 31);
+  border-radius: 12px;
+  background: #FFD028;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #E6B800;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(230, 184, 0, 0.4);
 }
 
 .pricing-action:hover,
 .pricing-action:focus {
-  background-color: #FFE066;
-  color: rgb(31, 31, 31);
+  background-color: #E6B800;
+  color: white;
   outline: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 184, 0, 0.4);
 }
+
+/* Envelope Button */
+.envelop-btn {
+  --transition: 0.5s;
+
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  min-width: 200px;
+  min-height: 50px;
+  margin: 0 2em 2em 2em;
+  background: rgb(31, 31, 31);
+  border: 2px solid #FFD028;
+  border-radius: 12px;
+  box-shadow: inset 0 0 20px rgb(31, 31, 31);
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.envelop-btn:focus {
+  box-shadow: 0 0 30px rgba(255, 208, 40, 0.5);
+}
+
+.envelop-btn::after {
+  content: "";
+  display: block;
+  aspect-ratio: 1;
+  width: 200%;
+  background: #FFD028;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: 0% 0%;
+  rotate: 45deg;
+  transition: var(--transition);
+}
+
+.envelop-btn__text {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.envelop-btn__text-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 1em 2em;
+  color: #FFD028;
+  transition: var(--transition);
+}
+
+.envelop-btn__text-inner:last-child {
+  color: rgb(31, 31, 31);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50% 0;
+}
+
+.envelop-btn__text-inner svg {
+  translate: 0 1px;
+  flex-shrink: 0;
+}
+
+.envelop-btn__text-inner path {
+  stroke: currentColor;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .envelop-btn:hover {
+    background: #FFD028;
+    box-shadow: inset 0 0 20px rgb(31, 31, 31), 0 0 30px rgba(255, 208, 40, 0.5);
+  }
+
+  .envelop-btn:hover::after {
+    translate: -50% -50%;
+  }
+
+  .envelop-btn:hover .envelop-btn__text-inner:first-child {
+    translate: 0 -100%;
+  }
+
+  .envelop-btn:hover .envelop-btn__text-inner:last-child {
+    translate: -50% -100%;
+  }
+}
+
+@media (hover: none) {
+  .envelop-btn:active {
+    background: #FFD028;
+    box-shadow: inset 0 0 20px rgb(31, 31, 31), 0 0 30px rgba(255, 208, 40, 0.5);
+  }
+
+  .envelop-btn:active::after {
+    translate: -50% -50%;
+  }
+
+  .envelop-btn:active .envelop-btn__text-inner:first-child {
+    translate: 0 -100%;
+  }
+
+  .envelop-btn:active .envelop-btn__text-inner:last-child {
+    translate: -50% -100%;
+  }
+}
+
 
 /* Responsive */
 @media screen and (min-width: 66.250em) {
-  .pricing-item {
-    margin: 1em -0.5em;
-  }
-  .pricing-item--featured {
-    margin: 0;
-    z-index: 10;
-    box-shadow: 0 0 20px rgba(237, 87, 36, 0.3);
+  .pricing-palden {
+    gap: 1em;
   }
 }
 
@@ -175,17 +352,24 @@
   .pricing-palden {
     flex-direction: column;
     align-items: center;
+    gap: 2em;
   }
 
   .pricing-item {
-    max-width: 400px;
+    max-width: 450px;
     width: 100%;
+  }
+  
+  .pricing-item--featured {
+    transform: scale(1);
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 @media (max-width: 768px) {
   .pricing-section {
-    padding: 80px 20px;
+    padding: 60px 20px 80px;
   }
 
   .pricing-title {
@@ -205,7 +389,11 @@
   }
 
   .pricing-action {
-    margin: auto 2em 2em 2em;
+    margin: 0 2em 2em 2em;
+  }
+
+  .envelop-btn {
+    margin: 0 2em 2em 2em;
   }
 }
 
@@ -215,16 +403,38 @@
   }
 
   .pricing-price {
-    font-size: 4em;
+    font-size: 3em;
   }
 
   .pricing-action {
-    margin: auto 1.5em 1.5em 1.5em;
-    padding: 0.85em 1.5em;
+    margin: 0 1.5em 1.5em 1.5em;
+    padding: 0.9em 1.5em;
+  }
+
+  .envelop-btn {
+    margin: 0 1.5em 1.5em 1.5em;
+    min-width: 150px;
+  }
+
+  .envelop-btn__text-inner {
+    padding: 0.9em 1.5em;
+    font-size: 14px;
   }
 
   .pricing-feature {
-    padding: 0.75em 0;
+    padding: 0.6em 0;
     font-size: 14px;
+  }
+  
+  .pricing-feature-list {
+    padding: 1.5em 1.5em 1.5em;
+  }
+  
+  .pricing-deco {
+    padding: 2em 1.5em 1.5em;
+  }
+  
+  .pricing-deco-img {
+    height: 60px;
   }
 }
