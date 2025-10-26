@@ -17,10 +17,11 @@ const DynamicTitle = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const pathToTitle = {
+    const pathToTitle: { [key: string]: string } = {
       '/': '🌈 likha siteworks',
       '/about': '🌈 About - likha siteworks',
       '/work': '🌈 Work - likha siteworks',
+      '/works': '🌈 Work - likha siteworks',
       '/our-story': '🌈 Our Story - likha siteworks',
       '/quote': '🌈 Get Quote - likha siteworks',
     };
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/works" element={<Work />} />
         <Route path="/our-story" element={<OurStory />} />
         <Route path="/quote" element={<GetQuote />} />
         <Route path="*" element={<NotFound />} />
