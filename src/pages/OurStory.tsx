@@ -509,11 +509,10 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   imagePlaceholder: {
     width: '100%',
-    maxWidth: '500px',
+    maxWidth: '700px',
     height: 'auto',
     objectFit: 'cover',
     borderRadius: '20px',
-    boxShadow: '0 15px 35px rgba(0, 0, 0, 0.2)',
     transition: 'transform 0.3s ease',
     cursor: 'pointer',
     display: 'block',
