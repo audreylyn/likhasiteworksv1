@@ -18,15 +18,15 @@ const DynamicTitle = () => {
 
   useEffect(() => {
     const pathToTitle: { [key: string]: string } = {
-      '/': '🌈 likha siteworks',
-      '/about': '🌈 About - likha siteworks',
-      '/work': '🌈 Work - likha siteworks',
-      '/works': '🌈 Work - likha siteworks',
-      '/our-story': '🌈 Our Story - likha siteworks',
-      '/quote': '🌈 Get Quote - likha siteworks',
+      '/': ' likha siteworks',
+      '/about': ' About - likha siteworks',
+      '/work': ' Work - likha siteworks',
+      '/works': ' Work - likha siteworks',
+      '/our-story': ' Our Story - likha siteworks',
+      '/quote': ' Get Quote - likha siteworks',
     };
 
-    const title = pathToTitle[location.pathname] || '🌈 Page Not Found - likha siteworks';
+    const title = pathToTitle[location.pathname] || ' Page Not Found - likha siteworks';
     document.title = title;
   }, [location.pathname]);
 

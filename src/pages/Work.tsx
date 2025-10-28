@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { X } from 'lucide-react';
@@ -26,36 +27,39 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'The Venue Collective',
-    subtitle: 'UI/UX Design & WordPress Development',
-    tags: ['UI/UX Design', 'Custom Functionality', 'WordPress Development', 'SEO Redirects'],
-    thumbnail: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
-    images: ['https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&h=800&fit=crop'],
+    title: 'NightFit™',
+    subtitle: 'Modern Landing Page Design & Development',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'UI/UX Design', 'SEO Optimization'],
+    thumbnail: '/src/assets/projects/nightfit/hero-section.PNG',
+    images: ['/src/assets/projects/nightfit/half1.png'],
     features: [
-      'UX Improvements',
-      'Dropdown Menus UI Improvement',
-      'Filter System Fixing',
-      'Optimized AJAX Requests',
-      'No Results Page UX Improvements',
-      'Venues Listing Page Updates',
-      'Changed Logo / Branding Sitewide',
-      'Setup SEO-Friendly Redirects to New Domain'
+      'Modern Dark/Light Mode Theme Toggle',
+      'Responsive Mobile-First Design',
+      'Interactive AI Chatbot Integration',
+      'Order Modal with Dynamic Pricing',
+      'Smooth Scroll Navigation',
+      'FAQ Accordion Component',
+      'Testimonials Carousel',
+      'Contact Form Integration',
+      'SEO-Optimized Meta Tags',
+      'Fast Performance with Vite'
     ],
     finalResult: {
-      description: "We successfully revamped The Venue Collective's website, making the venue filter system more intuitive, faster, and user-friendly. The updated dropdowns are easier to navigate, and the filter process feels smoother overall. We also made sure the venue listings load faster and added 'Learn More' and 'Book Now' buttons to help users explore venues. We updated the website's look with the new logo and moved the blog section. The new domain is live with proper redirects and SEO adjustments.",
+      description: "We successfully created a modern, conversion-focused landing page for NightFit™, a revolutionary overnight fat burner supplement. The website features a sleek dark mode design with neon-lime accents, providing an engaging user experience. Built with React and Vite for optimal performance, the site includes an interactive AI chatbot for customer support, dynamic order modals with quantity selection, and comprehensive product information sections. The responsive design ensures perfect viewing on all devices, while SEO optimization helps drive organic traffic.",
       highlights: [
-        'Clean, user-friendly dropdown menus with improved design.',
-        'Faster filter functionality with loading times under 3 seconds.',
-        'Updated branding across the site.',
-        'Simplified venue listing page.',
-        'SEO-friendly setup with proper redirects to the new domain.'
+        'Modern dark/light theme with smooth transitions and neon-lime accents.',
+        'Lightning-fast page load times with Vite build optimization.',
+        'Interactive chatbot for instant customer support and order assistance.',
+        'Fully responsive design optimized for mobile, tablet, and desktop.',
+        'Comprehensive SEO meta tags for improved search engine visibility.',
+        'Clean component architecture for easy maintenance and updates.'
       ],
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop'
+      image: '/src/assets/projects/nightfit/half2.png'
     },
     testimonial: {
-      text: "This was my first time working with htmlBurger and they were great to work with! We did a branding/copy overhaul and also improved UX/UI on the search and filter feature of our website. They do thorough and professional work at a fair price. If you are US-based, one thing to keep in mind when working with htmlBurger is they are based in Bulgaria, so the time difference creates a small lag in response time (on both ends) however they are always very responsive.",
-      author: 'Allison Camwillet',
-      date: 'October 21, 2024'
+      text: "Working with LikhaSiteWorks on the NightFit landing page was an excellent experience. They delivered a modern, high-converting website that perfectly captures our brand's energy. The dark mode design with neon accents looks incredible, and the interactive features like the chatbot and order modal work flawlessly. The site loads incredibly fast and looks great on all devices. Highly professional work delivered on time!",
+      author: 'NightFit Team',
+      date: 'October 28, 2025'
     }
   },
   {
@@ -88,10 +92,141 @@ const projects: Project[] = [
 
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const navigate = useNavigate();
+
+  // Hide scroll-to-top button when modal is open
+  useEffect(() => {
+    const scrollToTopBtn = document.querySelector('.scroll-to-top') as HTMLElement;
+    if (scrollToTopBtn) {
+      if (selectedProject) {
+        scrollToTopBtn.style.display = 'none';
+      } else {
+        scrollToTopBtn.style.display = 'flex';
+      }
+    }
+  }, [selectedProject]);
+
+  const handleGetStarted = () => {
+    navigate('/quote');
+  };
 
   return (
     <div style={{ background: '#fff' }}>
       <Header />
+      
+      <style>{`
+        @media (max-width: 768px) {
+          .hero-title {
+            font-size: 36px !important;
+          }
+          .hero-text {
+            font-size: 16px !important;
+          }
+          .projects-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+          .project-card {
+            min-width: 100% !important;
+          }
+          .project-title {
+            font-size: 24px !important;
+          }
+          .cta-title {
+            font-size: 32px !important;
+          }
+          .modal-overlay {
+            padding: 20px 10px !important;
+          }
+          .modal-content {
+            margin: 0 !important;
+            max-width: 100% !important;
+            border-radius: 12px !important;
+          }
+          .modal-header {
+            padding: 50px 20px 20px !important;
+          }
+          .modal-title {
+            font-size: 28px !important;
+          }
+          .modal-subtitle {
+            font-size: 15px !important;
+          }
+          .modal-tags {
+            flex-direction: column !important;
+            gap: 8px !important;
+          }
+          .modal-tag {
+            width: 100% !important;
+            text-align: center !important;
+          }
+          .modal-body {
+            padding: 0 20px 30px !important;
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+          .modal-body img {
+            width: 100% !important;
+            height: auto !important;
+          }
+          .modal-result {
+            padding: 30px 20px !important;
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+          .result-title {
+            font-size: 24px !important;
+          }
+          .modal-testimonial {
+            padding: 30px 20px !important;
+          }
+          .testimonial-title {
+            font-size: 20px !important;
+          }
+          .modal-cta {
+            padding: 30px 20px !important;
+          }
+          .cta-modal-title {
+            font-size: 24px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero-title {
+            font-size: 28px !important;
+          }
+          .modal-overlay {
+            padding: 10px 5px !important;
+          }
+          .modal-header {
+            padding: 50px 15px 15px !important;
+          }
+          .modal-title {
+            font-size: 22px !important;
+          }
+          .modal-subtitle {
+            font-size: 14px !important;
+          }
+          .modal-body {
+            padding: 0 15px 20px !important;
+          }
+          .modal-result {
+            padding: 25px 15px !important;
+          }
+          .result-title {
+            font-size: 20px !important;
+          }
+          .modal-testimonial {
+            padding: 25px 15px !important;
+          }
+          .modal-cta {
+            padding: 25px 15px !important;
+          }
+          .cta-modal-title {
+            font-size: 20px !important;
+          }
+        }
+      `}</style>
       
       {/* Hero Section */}
       <section style={{ 
@@ -100,14 +235,14 @@ const Work = () => {
         textAlign: 'center'
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h1 style={{ 
+          <h1 className="hero-title" style={{ 
             fontSize: '64px', 
             marginBottom: '24px',
             fontWeight: '700'
           }}>
             Selected <span style={{ color: '#f4d03f' }}>Projects</span>
           </h1>
-          <p style={{ 
+          <p className="hero-text" style={{ 
             fontSize: '18px', 
             lineHeight: '1.8', 
             color: '#5f5f5f',
@@ -122,7 +257,7 @@ const Work = () => {
       {/* Projects Grid */}
       <section style={{ padding: '60px 20px 120px', background: '#fff' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ 
+          <div className="projects-grid" style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(auto-fit, minmax(450px, 1fr))',
             gap: '40px'
@@ -131,6 +266,7 @@ const Work = () => {
               <div 
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
+                className="project-card"
                 style={{ 
                   cursor: 'pointer',
                   background: '#f5f5f5',
@@ -157,7 +293,7 @@ const Work = () => {
                   />
                 </div>
                 <div style={{ padding: '30px' }}>
-                  <h3 style={{ 
+                  <h3 className="project-title" style={{ 
                     fontSize: '28px', 
                     marginBottom: '8px',
                     fontWeight: '700'
@@ -185,7 +321,7 @@ const Work = () => {
         textAlign: 'center'
       }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h2 style={{ 
+          <h2 className="cta-title" style={{ 
             fontSize: '48px', 
             marginBottom: '20px',
             fontWeight: '700'
@@ -199,19 +335,21 @@ const Work = () => {
           }}>
             We are here to help. Let's discuss your needs and get started.
           </p>
-          <button style={{
-            background: '#000',
-            color: '#fff',
-            border: 'none',
-            padding: '16px 40px',
-            fontSize: '16px',
-            fontWeight: '600',
-            cursor: 'pointer',
-            borderRadius: '4px',
-            transition: 'transform 0.2s ease'
-          }}
-          onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-          onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          <button 
+            onClick={handleGetStarted}
+            style={{
+              background: '#000',
+              color: '#fff',
+              border: 'none',
+              padding: '16px 40px',
+              fontSize: '16px',
+              fontWeight: '600',
+              cursor: 'pointer',
+              borderRadius: '4px',
+              transition: 'transform 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
             GET STARTED
           </button>
@@ -220,26 +358,31 @@ const Work = () => {
 
       {/* Project Modal */}
       {selectedProject && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'rgba(0, 0, 0, 0.8)',
-          zIndex: 1000,
-          overflow: 'auto',
-          padding: '40px 20px'
-        }}
-        onClick={() => setSelectedProject(null)}
+        <div 
+          className="modal-overlay"
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0, 0, 0, 0.8)',
+            zIndex: 1000,
+            overflow: 'auto',
+            padding: '40px 20px',
+            boxSizing: 'border-box'
+          }}
+          onClick={() => setSelectedProject(null)}
         >
           <div 
+            className="modal-content"
             style={{
               maxWidth: '1100px',
               margin: '0 auto',
               background: '#fff',
               borderRadius: '8px',
-              position: 'relative'
+              position: 'relative',
+              boxSizing: 'border-box'
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -266,14 +409,14 @@ const Work = () => {
             </button>
 
             {/* Modal Header */}
-            <div style={{ padding: '60px 60px 40px', textAlign: 'center' }}>
-              <h2 style={{ fontSize: '48px', marginBottom: '12px', fontWeight: '700' }}>
+            <div className="modal-header" style={{ padding: '60px 60px 40px', textAlign: 'center' }}>
+              <h2 className="modal-title" style={{ fontSize: '48px', marginBottom: '12px', fontWeight: '700' }}>
                 {selectedProject.title}
               </h2>
-              <p style={{ fontSize: '18px', color: '#666', marginBottom: '24px' }}>
+              <p className="modal-subtitle" style={{ fontSize: '18px', color: '#666', marginBottom: '24px' }}>
                 {selectedProject.subtitle}
               </p>
-              <div style={{ 
+              <div className="modal-tags" style={{ 
                 display: 'flex', 
                 gap: '12px', 
                 justifyContent: 'center',
@@ -282,6 +425,7 @@ const Work = () => {
                 {selectedProject.tags.map((tag, index) => (
                   <span 
                     key={index}
+                    className="modal-tag"
                     style={{
                       padding: '8px 16px',
                       border: '1px solid #ddd',
@@ -297,7 +441,7 @@ const Work = () => {
             </div>
 
             {/* Main Image and Features */}
-            <div style={{ 
+            <div className="modal-body" style={{ 
               padding: '0 60px 40px',
               display: 'grid',
               gridTemplateColumns: '1fr 1fr',
@@ -348,7 +492,7 @@ const Work = () => {
             </div>
 
             {/* Final Result Section */}
-            <div style={{ 
+            <div className="modal-result" style={{ 
               padding: '60px',
               background: '#f9f4ef',
               display: 'grid',
@@ -357,7 +501,7 @@ const Work = () => {
               alignItems: 'center'
             }}>
               <div>
-                <h3 style={{ fontSize: '32px', marginBottom: '20px', fontWeight: '700' }}>
+                <h3 className="result-title" style={{ fontSize: '32px', marginBottom: '20px', fontWeight: '700' }}>
                   Final Result
                 </h3>
                 <p style={{ 
@@ -412,11 +556,11 @@ const Work = () => {
 
             {/* Testimonial Section */}
             {selectedProject.testimonial && (
-              <div style={{ 
+              <div className="modal-testimonial" style={{ 
                 padding: '60px',
                 background: '#f9f4ef'
               }}>
-                <h3 style={{ 
+                <h3 className="testimonial-title" style={{ 
                   fontSize: '24px', 
                   marginBottom: '20px',
                   fontWeight: '700'
@@ -439,7 +583,39 @@ const Work = () => {
                 }}>
                   — {selectedProject.testimonial.author}, {selectedProject.testimonial.date}
                 </p>
-                <button style={{
+                <button 
+                  onClick={handleGetStarted}
+                  style={{
+                    background: '#000',
+                    color: '#fff',
+                    border: 'none',
+                    padding: '14px 32px',
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    borderRadius: '4px'
+                  }}
+                >
+                  CHECK IT OUT LIVE
+                </button>
+              </div>
+            )}
+
+            {/* Modal CTA */}
+            <div className="modal-cta" style={{ 
+              padding: '60px',
+              background: '#f4d03f',
+              textAlign: 'center'
+            }}>
+              <h3 className="cta-modal-title" style={{ fontSize: '36px', marginBottom: '16px', fontWeight: '700' }}>
+                Have a similar project?
+              </h3>
+              <p style={{ fontSize: '16px', marginBottom: '24px', color: '#333' }}>
+                We are here to help. Let's discuss your needs and get started.
+              </p>
+              <button 
+                onClick={handleGetStarted}
+                style={{
                   background: '#000',
                   color: '#fff',
                   border: 'none',
@@ -448,34 +624,8 @@ const Work = () => {
                   fontWeight: '600',
                   cursor: 'pointer',
                   borderRadius: '4px'
-                }}>
-                  CHECK IT OUT LIVE
-                </button>
-              </div>
-            )}
-
-            {/* Modal CTA */}
-            <div style={{ 
-              padding: '60px',
-              background: '#f4d03f',
-              textAlign: 'center'
-            }}>
-              <h3 style={{ fontSize: '36px', marginBottom: '16px', fontWeight: '700' }}>
-                Have a similar project?
-              </h3>
-              <p style={{ fontSize: '16px', marginBottom: '24px', color: '#333' }}>
-                We are here to help. Let's discuss your needs and get started.
-              </p>
-              <button style={{
-                background: '#000',
-                color: '#fff',
-                border: 'none',
-                padding: '14px 32px',
-                fontSize: '14px',
-                fontWeight: '600',
-                cursor: 'pointer',
-                borderRadius: '4px'
-              }}>
+                }}
+              >
                 GET STARTED
               </button>
             </div>

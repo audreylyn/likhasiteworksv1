@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/components/Work.css';
 import { ExternalLink } from 'lucide-react';
+import Rainbow from './Rainbow';
 
 const Work = () => {
   const projects = [
@@ -62,7 +63,7 @@ const Work = () => {
               <div className="work-project-image">
                 <img src={project.image} alt={project.title} />
                 <div className="work-project-overlay">
-                  <ExternalLink className="work-project-icon" size={24} />
+                  <Rainbow width={40} height={40} className="work-project-icon" />
                 </div>
               </div>
               <div className="work-project-info">

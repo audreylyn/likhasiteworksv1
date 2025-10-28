@@ -197,14 +197,95 @@ const OurStory = () => {
             display: none !important;
           }
         }
+
+        @media (max-width: 1024px) {
+          .story-section {
+            flex-direction: column !important;
+            padding: 2rem 1rem !important;
+            min-height: auto !important;
+            gap: 2rem !important;
+          }
+          .text-block {
+            max-width: 100% !important;
+            padding: 2rem !important;
+            margin: 0 !important;
+            flex: 1 !important;
+          }
+          .text-block h2 {
+            font-size: 2rem !important;
+          }
+          .text-block p {
+            font-size: 1rem !important;
+            line-height: 1.7 !important;
+          }
+          .image-block {
+            width: 100% !important;
+            flex: 1 !important;
+          }
+          .image-block img {
+            max-width: 100% !important;
+            width: 100% !important;
+            height: auto !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .story-container {
+            padding: 1rem !important;
+          }
+          .story-section {
+            padding: 1.5rem 0.5rem !important;
+            gap: 1.5rem !important;
+          }
+          .text-block {
+            padding: 1.5rem !important;
+            border-radius: 15px !important;
+          }
+          .text-block h2 {
+            font-size: 1.75rem !important;
+            margin-bottom: 1.5rem !important;
+          }
+          .text-block p {
+            font-size: 0.95rem !important;
+            margin-bottom: 1.5rem !important;
+            line-height: 1.6 !important;
+          }
+          .next-button {
+            padding: 0.75rem 1.5rem !important;
+            font-size: 1rem !important;
+            margin-top: 1rem !important;
+          }
+          .image-block img {
+            border-radius: 15px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .text-block {
+            padding: 1.25rem !important;
+          }
+          .text-block h2 {
+            font-size: 1.5rem !important;
+            margin-bottom: 1rem !important;
+          }
+          .text-block p {
+            font-size: 0.9rem !important;
+            margin-bottom: 1.25rem !important;
+          }
+          .next-button {
+            padding: 0.65rem 1.25rem !important;
+            font-size: 0.95rem !important;
+          }
+        }
       `}</style>
 
       {/* Story Container */}
-      <div style={styles.storyContainer}>
+      <div style={styles.storyContainer} className="story-container">
         {/* Section 1: The Beginning */}
         <section 
           ref={el => { sectionsRef.current[0] = el; }}
           style={styles.storySection}
+          className="story-section"
         >
           <div className="text-block" style={styles.textBlock}>
             <h2 style={styles.heading}>The Beginning of the Journey</h2>
@@ -215,6 +296,7 @@ const OurStory = () => {
               a mission to empower brands with exceptional web experiences.
             </p>
             <button 
+              className="next-button"
               style={styles.nextButton}
               onClick={() => scrollToSection(1)}
               onMouseEnter={(e) => e.currentTarget.style.background = '#555'}
@@ -237,6 +319,7 @@ const OurStory = () => {
         <section 
           ref={el => { sectionsRef.current[1] = el; }}
           style={styles.storySection}
+          className="story-section"
         >
           <div className="text-block" style={styles.textBlock}>
             <h2 style={styles.heading}>Growth & Innovation</h2>
@@ -247,6 +330,7 @@ const OurStory = () => {
               built relationships and solutions that drive real results.
             </p>
             <button 
+              className="next-button"
               style={styles.nextButton}
               onClick={() => scrollToSection(2)}
               onMouseEnter={(e) => e.currentTarget.style.background = '#555'}
@@ -269,6 +353,7 @@ const OurStory = () => {
         <section 
           ref={el => { sectionsRef.current[2] = el; }}
           style={styles.storySection}
+          className="story-section"
         >
           <div className="text-block" style={styles.textBlock}>
             <h2 style={styles.heading}>Our Vision for the Future</h2>
@@ -321,6 +406,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     background: '#f9f4ef',
     minHeight: '100vh',
     overflowX: 'hidden',
+    width: '100%',
   },
   progressBar: {
     position: 'fixed',
@@ -386,6 +472,8 @@ const styles: { [key: string]: React.CSSProperties } = {
     maxWidth: '1400px',
     margin: '0 auto',
     padding: '2rem',
+    width: '100%',
+    boxSizing: 'border-box',
   },
   storySection: {
     display: 'flex',
@@ -396,6 +484,8 @@ const styles: { [key: string]: React.CSSProperties } = {
     gap: '6rem',
     maxWidth: '1600px',
     margin: '0 auto',
+    width: '100%',
+    boxSizing: 'border-box',
   },
   textBlock: {
     flex: '0.8',
@@ -407,12 +497,15 @@ const styles: { [key: string]: React.CSSProperties } = {
     margin: '1rem',
     backdropFilter: 'blur(10px)',
     letterSpacing: '0.3px',
+    boxSizing: 'border-box',
   },
   imageBlock: {
     flex: 1,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    maxWidth: '100%',
+    overflow: 'hidden',
   },
   imagePlaceholder: {
     width: '100%',
@@ -423,6 +516,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     boxShadow: '0 15px 35px rgba(0, 0, 0, 0.2)',
     transition: 'transform 0.3s ease',
     cursor: 'pointer',
+    display: 'block',
   },
   heading: {
     fontSize: '2.8rem',
