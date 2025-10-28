@@ -30,8 +30,8 @@ const projects: Project[] = [
     title: 'NightFit™',
     subtitle: 'Modern Landing Page Design & Development',
     tags: ['React', 'Vite', 'Tailwind CSS', 'UI/UX Design', 'SEO Optimization'],
-    thumbnail: '/src/assets/projects/nightfit/hero-section.PNG',
-    images: ['/src/assets/projects/nightfit/half1.png'],
+    thumbnail: '/assets/projects/nightfit/hero-section.PNG',
+    images: ['/assets/projects/nightfit/half1.png'],
     features: [
       'Modern Dark/Light Mode Theme Toggle',
       'Responsive Mobile-First Design',
@@ -54,7 +54,7 @@ const projects: Project[] = [
         'Comprehensive SEO meta tags for improved search engine visibility.',
         'Clean component architecture for easy maintenance and updates.'
       ],
-      image: '/src/assets/projects/nightfit/half2.png'
+      image: '/assets/projects/nightfit/half2.png'
     },
     testimonial: {
       text: "Working with LikhaSiteWorks on the NightFit landing page was an excellent experience. They delivered a modern, high-converting website that perfectly captures our brand's energy. The dark mode design with neon accents looks incredible, and the interactive features like the chatbot and order modal work flawlessly. The site loads incredibly fast and looks great on all devices. Highly professional work delivered on time!",
